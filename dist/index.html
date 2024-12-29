@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/style/style.css">
+    <title>Mini library</title>
+</head>
+<body>
+    <!-- First Page -->
+    <div class="container">
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+
+        <section class="serachBarContainer">
+            <div class="searchBar">
+                <input  id="serachInput" type="text" placeholder="Search for the book title.">
+                <button id="serachBtn">Search</button>
+            </div>
+        </section>
+
+        <section class="booksContainer">
+
+            <h1>8 Classic Childrens Books</h1>
+
+            <div class="books" id="books"></div>
+        </section>
+
+    </div>
+
+    <!-- Second Page -->
+     <div class="containerBookInfo">
+
+        <section class="selectedBook">
+
+            <article class="theBook">
+
+                <div class="theBookFirstPage">
+                    <h3 id="bookTitleFirstPage">Book Name</h3>
+                    <p id="bookArthurFirstPage">Author</p>
+                </div>
+
+            </article>
+
+            <article class="bookInfo">
+
+                <div class="bookName">
+
+                    <h3 id="bookTitleInfo">name</h3>
+                    <p id="bookArthurInfo">name</p>
+
+                </div>
+
+                <div class="bookDescription">
+                    <p id="bookDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit iure ex exercitationem, architecto numquam eveniet omnis dolor repellendus quisquam neque et sapiente, sint iusto dolore voluptate ipsum unde corporis vel.
+                    Nemo aperiam modi porro quae earum, vitae quibusdam at ducimus, alias culpa neque, excepturi quam dignissimos facilis quo blanditiis illum possimus. Architecto corrupti mollitia molestiae ipsa nesciunt reprehenderit totam asperiores!
+                    Perferendis sed natus, exercitationem necessitatibus nihil distinctio similique saepe, voluptatum sapiente laudantium voluptates corporis recusandae atque officia praesentium ullam. Consectetur est laborum maiores architecto quas neque impedit tempora repudiandae quo?</p>
+                </div>
+
+                <div class="bookExtraDescription">
+                    <p>Audience : <span id="audience"> 8 - 12 years</span> </p>
+                    <p>Pages : <span id="pages"> 256</span> </p>
+                    <p>First published : <span id="firstpublished"> 1952</span></p>
+                    <p>Publisher : <span id="publisher"> Square Fish</span></p>
+                </div>
+
+                <div class="readMore">
+                    <button id="readMoreBtn">Oh, I want to read it!</button>
+                </div>
+
+            </article>
+
+        </section>
+
+     </div>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+a:hover{
+    color: gold;
+    border-bottom: 2px solid black;
+}
+input{
+    width: 20rem;
+    height: 2rem;
+    padding: 0 .5rem;
+}
+button{
+    padding: .5rem;
+    border-radius: .3rem;
+    background-color: rgb(248, 248, 248);
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(212, 211, 211);
+}
+.container{
+    width: 80%;
+    margin: auto;
+    /* display: none; */
+    display: grid;
+    grid-template-rows: .5fr .5fr 5fr;
+    grid-template-areas: 
+    "navbar"
+    "searchbar"
+    "books"
+    ;
+}
+
+.navbar{
+    grid-area: navbar;
+    ul{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+.serachBarContainer{
+    grid-area: searchbar;
+
+    .searchBar{
+        padding: 1rem 0;
+    }
+}
+
+.booksContainer{
+    grid-area: books;
+    border: 2px solid black;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .books{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: auto;
+        gap: 1rem;
+        padding: 1rem;
+
+        .book{
+            width:300px ;
+            height: 300px;
+            flex: 0 0 auto;
+            
+            .bookInfo{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 0 0 1rem 1rem;
+                height: 100%;
+                border-left: 4px solid black;
+                margin-left: 1rem;
+                h3,p{
+                    color: white;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+
+
+        }
+
+        .book:hover{
+            opacity: .8;
+            cursor: pointer;
+            box-shadow: 0 0 5px 5px gray;
+        }
+    }
+}
+
+/* Second Page */
+.containerBookInfo{
+    display: none;
+    background-color: rgb(74, 73, 73);
+    width: 50%;
+    height: 60%;
+    
+
+    .selectedBook{
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+        height: 100%;
+
+        .theBook{
+            background-color: antiquewhite;
+            width: 50%;
+
+            .theBookFirstPage{
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                padding: 0 0 1rem 1rem;
+                height: 100%;
+                border-left: 4px solid black;
+                margin-left: 1rem;
+                h3,p{
+                    color: black;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        .bookInfo{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            color: white;
+            flex: auto;
+
+            .bookDescription{
+                overflow: auto;
+            }
+            .bookExtraDescription{
+                padding: .5rem;
+                background-color: rgb(61, 61, 61);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 1rem;
+            }
+            .readMore{
+                button{
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width : 3000px) {
+    .containerBookInfo{
+        width: 80% !important;
+        height: 80% !important;
+        h3{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+@media screen and (max-width : 1208px) {
+    .containerBookInfo{
+        width: 80% !important;
+        height: 80% !important;
+    }
+}
+@media screen and (max-width : 890px) {
+
+    .containerBookInfo{
+        width: 100% !important;
+        height: 100% !important;
+        .bookInfo{
+            .bookExtraDescription{
+                display: flex !important;
+                flex-direction: column;
+            }
+        }
+    }   
+}
+@media screen and (max-width : 450px) {
+
+   .selectedBook{
+    flex-direction: column;
+    width: 100% !important;
+    .theBook{
+        width: 100% !important;
+    }
+    .bookInfo{
+        width: 100% !important;
+    }
+   }
+}
+@media screen and (max-width : 310px) {
+
+    .containerBookInfo{
+        overflow: auto;
+    }
+ }
